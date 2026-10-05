@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="about.html" method="POST">
+        <!-- Username Field -->
+        <p>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" maxlength="20" required>
+        </p>
+
+        <!-- Password Field with Tooltip and Length Constraints -->
+        <p>
+            <label for="password">Password:</label><br>
+            <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                minlength="8" 
+                maxlength="16" 
+                title="Password must be 8-16 characters long, containing at least one number and one uppercase letter."
+                required
+            >
+        </p>
+
+        <!-- Login Button -->
+        <button type="submit" href="abc.html">Login</button>
+    </form>
+</body>
+</html>

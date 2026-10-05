@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Georgia, "Times New Roman", serif;
+            background-color: white;
+            color: #111;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 0 0 25px 0;
+        }
+
+        details {
+            margin-bottom: 15px;
+        }
+
+        summary {
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 0 0 25px 0;
+        }
+
+        /* Flexbox container */
+        .flex-container {
+            border: 3px solid #111;
+            height: 310px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 14px;
+            padding: 75px 8px;
+            overflow: hidden;
+        }
+
+        /* Flexbox items */
+        .box {
+            height: 95px;
+            background-color: #6be99b;
+
+            display: flex;
+            align-items: center;
+
+            padding-left: 30px;
+
+            font-size: 21px;
+        }
+
+        .box1 {
+            flex: 1;
+        }
+
+        .box2 {
+            flex: 2;
+        }
+
+        .box3 {
+            flex: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learning Flexbox</h1>
+
+    <details open>
+        <summary>What is Flexbox?</summary>
+
+        <p>
+            Flexbox is a CSS layout module that makes it easier to design
+            flexible and responsive layout structures without using float
+            or positioning.
+        </p>
+    </details>
+
+    <div class="flex-container">
+
+        <div class="box box1">
+            Box 1
+        </div>
+
+        <div class="box box2">
+            Box 2
+        </div>
+
+        <div class="box box3">
+            Box 3
+        </div>
+
+    </div>
+
+</body>
+</html>

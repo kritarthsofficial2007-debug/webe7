@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: white;
+    color: #333;
+}
+
+/* Profile Image */
+img {
+    float: right;
+    width: 150px;
+    height: 185px;
+    border: 5px solid blue;
+    border-radius: 10px;
+}
+
+
+/* Header Section */
+div {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav-box{
+    width: 560px;
+    background-color: #f2f2f2;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+
+
+.nav-box a{
+    text-decoration: none;
+    color: rgb(25, 89, 179);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    margin : 15px;
+    border: 2px solid blue;
+    
+    
+}
+
+.nav-box a:hover{
+    color: rgb(34, 31, 203);
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+h3 {
+    text-align: center;
+    color: #555;
+}
+
+
+/* Headings */
+h2 {
+    color: darkblue;
+    border-bottom: 2px solid blue;
+    padding-bottom: 5px;
+}
+
+
+/* Paragraph */
+p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* Skills List */
+ul {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+li {
+    margin: 8px;
+}
+
+
+/* Highlight Goal */
+mark {
+    background-color: yellow;
+    padding: 5px;
+}
+
+
+/* LinkedIn Link */
+a {
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+/* Table Styling */
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Horizontal Line */
+hr {
+    margin: 20px 0;
+}

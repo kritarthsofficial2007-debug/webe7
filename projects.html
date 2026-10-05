@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRITARTH SHUKLA | Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+            color: #222;
+            line-height: 1.5;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #9b345b;
+            margin-bottom: 22px;
+            font-size: 34px;
+        }
+
+        h2 {
+            color: #8f3154;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .about p {
+            font-size: 18px;
+        }
+
+        .skills p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 18px 0;
+        }
+
+        .projects {
+            display: flex;
+            gap: 55px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            flex: 1;
+            min-width: 260px;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .project-card p {
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #15956f;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: underline;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #11785a;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 15px;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .projects {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- About Me -->
+        <section class="section about">
+            <h1>About Me</h1>
+
+            <p>
+                Hello, my name is <strong>KRITARTH SHUKLA</strong>. I am a first year
+                Computer Science Engineering student. I am interested in coding,
+                web development and Artificial Intelligence.
+            </p>
+
+            <p>
+                I am currently learning different programming languages and web
+                development technologies. I like creating simple websites and
+                working on new projects.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section class="section skills">
+            <h2>My Skills</h2>
+
+            <p>C++</p>
+            <p>Python</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Machine Learning</p>
+        </section>
+
+        <!-- Projects -->
+        <section class="section">
+            <h2>My Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio website created using HTML.</p>
+                    <a href="#" class="btn">View Portfolio</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Restaurant Website</h3>
+                    <p>A restaurant website created using HTML.</p>
+                    <a href="#" class="btn">View Restaurant</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Student Registration Page</h3>
+                    <p>A student registration page made using HTML.</p>
+                    <a href="#" class="btn">Student Registration</a>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

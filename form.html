@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT REGISTRATION FORM</title>
+    <Style>
+      *,html{
+        margin: 0;
+        padding:0;
+        
+      }
+      #box{
+        width: 600px;
+        height: 900px;
+        background-color: antiquewhite;
+        margin: 0 auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+      }
+        </Style>
+</head>
+<body>
+    <div id="box">
+        <form>
+            <div>
+                <label for="name"> Your Name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <label for="email"> Your Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <label for="password"> Your Password:</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <label for="gender"> Your Gender:</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male"> Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female"> Female</label>
+                <label for="country"> Your Country:</label> 
+                <select name="country" id="country">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                </select>
+                <label for="hobbies"> Your Hobbies:</label>
+                <input type="text" name="hobbies" id="hobbies" placeholder="Enter your hobbies">
+                <label for="address"> Your Address:</label>
+                <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address"></textarea>
+
+                <input type="submit" value="Submit">
+                <a href="login.html">Login</a>
+
+                
+            </div>
+        </form>
+        </div>
+    
+</body>
+</html>
