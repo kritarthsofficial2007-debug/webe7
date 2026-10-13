@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for standard symbols and emojis -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings to ensure proper responsive scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBlink - Delivering Groceries in Minutes</title>
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. NAVIGATION BAR (Header)
+         Contains the brand logo, search bar, navigation links, and cart badge.
+         ================================================================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo with Blinkit-inspired yellow and green colors -->
+            <a href="index.html" class="logo">
+                ⚡ Quick<span class="logo-highlight">Blink</span>
+                <span class="logo-badge">10 MINS</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <!-- Current active page is Home -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Cart Link with Dynamic Count Badge -->
+                <li>
+                    <a href="cart.html" class="nav-cart-btn">
+                        🛒 Cart (<span class="cart-badge">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         2. SEARCH BAR SECTION
+         Quick search bar allowing customers to find everyday grocery items.
+         ================================================================= -->
+    <section class="search-section">
+        <div class="container" style="padding: 0;">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search for milk, bananas, bread, chips, or drinks..." 
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- =================================================================
+             3. HERO BANNER SECTION
+             Prominently displays the slogan: "Delivering groceries in minutes"
+             Uses Flexbox layout with text on the left and illustration on right.
+             ================================================================= -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <span class="hero-tag">⚡ Superfast Delivery</span>
+                <!-- Exact required hero heading -->
+                <h1 class="hero-title">
+                    Delivering groceries <span>in minutes</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Get farm-fresh fruits, organic vegetables, dairy, snacks, and daily essentials delivered right to your doorstep within 10 minutes.
+                </p>
+                <!-- Call-to-action button linking directly to the product catalog -->
+                <a href="products.html" class="btn-primary">Shop Now ➔</a>
+            </div>
+
+            <!-- Hero Banner Grocery Illustration -->
+            <div class="hero-image-wrapper">
+                <img src="images/hero-grocery.svg" alt="Fresh Groceries in Grocery Bag">
+            </div>
+        </section>
+
+        <!-- =================================================================
+             4. CATEGORIES SECTION (CSS Grid)
+             Displays the 5 required category cards:
+             1. Fruits, 2. Vegetables, 3. Dairy, 4. Snacks, 5. Beverages
+             ================================================================= -->
+        <section style="margin-top: 40px;">
+            <div class="section-header">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Explore our wide selection of fresh grocery departments</p>
+            </div>
+
+            <!-- 5-column responsive grid container -->
+            <div class="category-grid">
+                
+                <!-- Category 1: Fruits -->
+                <a href="products.html?category=fruits" class="category-card">
+                    <img src="images/fruits.svg" alt="Fresh Fruits" class="category-img">
+                    <span class="category-name">Fruits</span>
+                    <span class="category-badge">Fresh & Sweet</span>
+                </a>
+
+                <!-- Category 2: Vegetables -->
+                <a href="products.html?category=vegetables" class="category-card">
+                    <img src="images/vegetables.svg" alt="Fresh Vegetables" class="category-img">
+                    <span class="category-name">Vegetables</span>
+                    <span class="category-badge">Farm Fresh</span>
+                </a>
+
+                <!-- Category 3: Dairy -->
+                <a href="products.html?category=dairy" class="category-card">
+                    <img src="images/dairy.svg" alt="Dairy Products" class="category-img">
+                    <span class="category-name">Dairy</span>
+                    <span class="category-badge">Milk & Butter</span>
+                </a>
+
+                <!-- Category 4: Snacks -->
+                <a href="products.html?category=snacks" class="category-card">
+                    <img src="images/snacks.svg" alt="Snacks and Munchies" class="category-img">
+                    <span class="category-name">Snacks</span>
+                    <span class="category-badge">Crispy & Tasty</span>
+                </a>
+
+                <!-- Category 5: Beverages -->
+                <a href="products.html?category=beverages" class="category-card">
+                    <img src="images/beverages.svg" alt="Cold Beverages and Drinks" class="category-img">
+                    <span class="category-name">Beverages</span>
+                    <span class="category-badge">Juices & Sodas</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- =================================================================
+             5. VALUE PROPOSITION / FEATURES SECTION
+             Highlights the core service perks using simple Flexbox cards.
+             ================================================================= -->
+        <section class="features-section">
+            <!-- Feature 1: Superfast delivery -->
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <div>
+                    <h3 class="feature-title">10-Minute Delivery</h3>
+                    <p class="feature-desc">Guaranteed instant doorstep delivery straight from our local fulfillment store.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2: Quality guarantee -->
+            <div class="feature-box">
+                <div class="feature-icon">🌿</div>
+                <div>
+                    <h3 class="feature-title">Best Quality</h3>
+                    <p class="feature-desc">Sourced directly from certified organic farms and reputed dairy partners.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3: Best prices -->
+            <div class="feature-box">
+                <div class="feature-icon">💰</div>
+                <div>
+                    <h3 class="feature-title">Super Savings</h3>
+                    <p class="feature-desc">Unbeatable daily prices, combo deals, and zero delivery charges over ₹199.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================================
+         6. FOOTER SECTION
+         Contains About Us, Quick Links, Contact details, Social Media & Copyright.
+         ================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                    <h3 class="footer-title">⚡ QuickBlink</h3>
+                    <p class="footer-text">
+                        India's instant grocery delivery service. We bring fresh vegetables, dairy, snacks, and daily essentials straight to your kitchen in just 10 minutes.
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Details -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p class="footer-text">📍 Tech Hub, Sector 62, Noida, India</p>
+                    <p class="footer-text">📞 Support: +91 98765 43210</p>
+                    <p class="footer-text">✉️ help@quickblinkgrocery.com</p>
+                </div>
+
+                <!-- Column 4: Social Media Icons -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn" title="Facebook">f</a>
+                        <a href="#" class="social-btn" title="Twitter / X">𝕏</a>
+                        <a href="#" class="social-btn" title="Instagram">in</a>
+                        <a href="#" class="social-btn" title="YouTube">▶</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright Notice -->
+            <div class="footer-copyright">
+                <p>&copy; 2026 QuickBlink Grocery. All Rights Reserved. Designed for 1st Year B.Tech Academic Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

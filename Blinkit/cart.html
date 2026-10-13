@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and mobile viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart - QuickBlink Grocery</title>
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. NAVIGATION BAR
+         Consistent navigation bar with dynamic cart count.
+         ================================================================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo">
+                ⚡ Quick<span class="logo-highlight">Blink</span>
+                <span class="logo-badge">10 MINS</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Current active page is Cart -->
+                <li>
+                    <a href="cart.html" class="nav-cart-btn active">
+                        🛒 Cart (<span class="cart-badge">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Page Header -->
+        <div class="section-header" style="margin-top: 20px;">
+            <h1 class="section-title">My Shopping Cart</h1>
+            <p class="section-subtitle">Review your selected items and proceed to instant 10-minute checkout</p>
+        </div>
+
+        <!-- =================================================================
+             2. EMPTY CART VIEW
+             Displayed dynamically via JavaScript when no items exist in LocalStorage.
+             ================================================================= -->
+        <div class="empty-cart-box" id="empty-cart-view" style="display: none;">
+            <img src="images/empty-cart.svg" alt="Empty Shopping Cart" class="empty-cart-img">
+            <h2 style="font-size: 22px; margin-bottom: 8px;">Your cart is empty!</h2>
+            <p style="color: #6b7280; margin-bottom: 24px;">Looks like you haven't added anything to your cart yet.</p>
+            <a href="products.html" class="btn-primary">Browse Products ➔</a>
+        </div>
+
+        <!-- =================================================================
+             3. CART TWO-COLUMN LAYOUT (Flexbox)
+             Left Column: List of items added to cart with + / - controls.
+             Right Column: Bill Summary (Subtotal, Delivery Fee, Grand Total).
+             ================================================================= -->
+        <div class="cart-layout" id="cart-content-wrapper">
+
+            <!-- LEFT COLUMN: CART ITEMS LIST -->
+            <div class="cart-items-column" id="cart-items-container">
+                <!-- Dynamically populated by renderCartPage() in script.js -->
+            </div>
+
+            <!-- RIGHT COLUMN: BILL SUMMARY -->
+            <div class="cart-summary-column" id="cart-summary-container">
+                <h3 class="bill-title">Bill Details</h3>
+
+                <!-- Subtotal row -->
+                <div class="bill-row">
+                    <span>Items Subtotal</span>
+                    <span id="bill-subtotal" style="font-weight: 700; color: #111827;">₹0</span>
+                </div>
+
+                <!-- Delivery Fee row (Free over ₹199) -->
+                <div class="bill-row">
+                    <span>Delivery Fee (10 mins)</span>
+                    <span id="bill-delivery" style="color: #0c831f; font-weight: 700;">FREE</span>
+                </div>
+
+                <!-- Handling Fee row -->
+                <div class="bill-row">
+                    <span>Handling & Packaging</span>
+                    <span id="bill-handling" style="font-weight: 700; color: #111827;">₹2</span>
+                </div>
+
+                <!-- Free delivery note -->
+                <div style="background-color: #f0fdf4; border: 1px dashed #86efac; border-radius: 6px; padding: 8px 12px; margin: 12px 0; font-size: 12px; color: #166534;">
+                    🎉 <strong>Free Delivery:</strong> Applied on all orders above ₹199!
+                </div>
+
+                <!-- Grand Total row -->
+                <div class="bill-row total-row">
+                    <span>To Pay</span>
+                    <span id="bill-grand-total">₹0</span>
+                </div>
+
+                <!-- Place Order Button -->
+                <button class="btn-checkout" onclick="handleCheckout()">
+                    Proceed to Pay ➔
+                </button>
+
+                <!-- Back to shop link -->
+                <div style="text-align: center; margin-top: 14px;">
+                    <a href="products.html" style="color: #0c831f; font-weight: 600; text-decoration: none; font-size: 14px;">
+                        + Add more grocery items
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =================================================================
+         4. FOOTER SECTION
+         ================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">⚡ QuickBlink</h3>
+                    <p class="footer-text">
+                        India's instant grocery delivery service. Delivering fresh vegetables, dairy, snacks, and drinks in 10 minutes.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p class="footer-text">📍 Tech Hub, Sector 62, Noida, India</p>
+                    <p class="footer-text">📞 Support: +91 98765 43210</p>
+                    <p class="footer-text">✉️ help@quickblinkgrocery.com</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn" title="Facebook">f</a>
+                        <a href="#" class="social-btn" title="Twitter / X">𝕏</a>
+                        <a href="#" class="social-btn" title="Instagram">in</a>
+                        <a href="#" class="social-btn" title="YouTube">▶</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 QuickBlink Grocery. All Rights Reserved. Designed for 1st Year B.Tech Academic Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

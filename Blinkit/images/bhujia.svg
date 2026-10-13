@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <circle cx="100" cy="100" r="85" fill="#ffedd5"/>
+  <g transform="translate(60, 40)">
+    <!-- Bhujia bag -->
+    <path d="M 5 15 L 75 15 L 70 105 L 10 105 Z" fill="#ea580c"/>
+    <polygon points="5,15 15,10 25,15 35,10 45,15 55,10 65,15 75,10 75,15" fill="#c2410c"/>
+    <rect x="15" y="45" width="50" height="25" rx="4" fill="#fbbf24"/>
+    <text x="21" y="61" fill="#78350f" font-family="sans-serif" font-size="9" font-weight="bold">BHUJIA</text>
+    <!-- Crispy noodle threads -->
+    <path d="M 25 85 Q 35 80 45 88 Q 55 92 60 85" stroke="#fde047" stroke-width="2.5" fill="none"/>
+    <path d="M 22 92 Q 32 96 42 90 Q 52 86 58 95" stroke="#fde047" stroke-width="2.5" fill="none"/>
+  </g>
+</svg>

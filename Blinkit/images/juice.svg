@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <circle cx="100" cy="100" r="85" fill="#ffedd5"/>
+  <g transform="translate(70, 40)">
+    <!-- Juice Carton -->
+    <polygon points="12,0 48,0 60,25 0,25" fill="#f97316"/>
+    <rect x="0" y="25" width="60" height="95" rx="4" fill="#fb923c"/>
+    <rect x="0" y="50" width="60" height="30" fill="#ffffff"/>
+    <text x="14" y="69" fill="#ea580c" font-family="sans-serif" font-size="11" font-weight="bold">JUICE</text>
+    <!-- Orange slice icon -->
+    <circle cx="30" cy="98" r="12" fill="#ea580c"/>
+    <circle cx="30" cy="98" r="9" fill="#fdba74"/>
+    <!-- Straw -->
+    <line x1="42" y1="-12" x2="35" y2="10" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <circle cx="100" cy="100" r="85" fill="#fefce8"/>
+  <!-- Potato 1 -->
+  <ellipse cx="95" cy="110" rx="55" ry="42" fill="#b45309" transform="rotate(-10 95 110)"/>
+  <ellipse cx="90" cy="105" rx="48" ry="35" fill="#d97706" transform="rotate(-10 90 105)"/>
+  <!-- Spots / eyes -->
+  <ellipse cx="70" cy="95" rx="5" ry="2" fill="#78350f" opacity="0.6"/>
+  <ellipse cx="115" cy="90" rx="6" ry="2.5" fill="#78350f" opacity="0.6"/>
+  <ellipse cx="100" cy="125" rx="6" ry="3" fill="#78350f" opacity="0.6"/>
+  <ellipse cx="65" cy="120" rx="4" ry="2" fill="#78350f" opacity="0.6"/>
+  <ellipse cx="125" cy="115" rx="5" ry="2" fill="#78350f" opacity="0.6"/>
+</svg>

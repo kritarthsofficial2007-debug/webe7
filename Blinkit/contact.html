@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - QuickBlink Grocery</title>
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. NAVIGATION BAR
+         Sticky header with brand logo, page links, and cart badge.
+         ================================================================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo">
+                ⚡ Quick<span class="logo-highlight">Blink</span>
+                <span class="logo-badge">10 MINS</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <!-- Current active page is Contact -->
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="nav-cart-btn">
+                        🛒 Cart (<span class="cart-badge">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Page Header -->
+        <div class="section-header" style="margin-top: 20px;">
+            <h1 class="section-title">Get in Touch with Us</h1>
+            <p class="section-subtitle">Have a question about your grocery delivery or need assistance? We're here 24x7 to help.</p>
+        </div>
+
+        <!-- =================================================================
+             2. CONTACT LAYOUT (Flexbox: Form on Left, Contact Details on Right)
+             ================================================================= -->
+        <div class="contact-layout">
+
+            <!-- LEFT BOX: SIMPLE CONTACT FORM -->
+            <div class="contact-form-card">
+                <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Send Us a Message</h2>
+                <p style="font-size: 14px; color: #6b7280; margin-bottom: 24px;">
+                    Fill out the form below and our grocery customer support team will get back to you promptly.
+                </p>
+
+                <!-- Form: Handled by script.js using event.preventDefault() and alert -->
+                <form id="contact-form">
+                    
+                    <!-- Form Field 1: Name -->
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="contact-name" 
+                            class="form-input" 
+                            placeholder="e.g. Rahul Sharma" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Form Field 2: Email -->
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="contact-email" 
+                            class="form-input" 
+                            placeholder="e.g. rahul@example.com" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Form Field 3: Message -->
+                    <div class="form-group">
+                        <label for="contact-message" class="form-label">Your Message / Query</label>
+                        <textarea 
+                            id="contact-message" 
+                            class="form-textarea" 
+                            placeholder="Tell us what you need help with (order status, product query, delivery feedback)..." 
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Form Submit Button -->
+                    <button type="submit" class="btn-submit">
+                        Submit Message ➔
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- RIGHT BOX: STORE & SUPPORT INFORMATION -->
+            <div class="contact-info-card">
+                <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 4px;">Store Support Info</h2>
+                <p style="font-size: 13px; color: #6b7280;">Reach our instant delivery hubs across major cities.</p>
+
+                <!-- Support item 1: Address -->
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong style="font-size: 14px; display: block;">Fulfillment Center</strong>
+                        <span style="font-size: 13px; color: #6b7280;">Plot 42, Knowledge Park III, Tech Zone, Greater Noida, UP - 201306</span>
+                    </div>
+                </div>
+
+                <!-- Support item 2: Phone Helpline -->
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong style="font-size: 14px; display: block;">Helpline (Toll Free)</strong>
+                        <span style="font-size: 13px; color: #6b7280;">+91 1800-123-4567 / +91 98765 43210</span>
+                    </div>
+                </div>
+
+                <!-- Support item 3: Email Support -->
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <strong style="font-size: 14px; display: block;">Email Support</strong>
+                        <span style="font-size: 13px; color: #6b7280;">support@quickblinkgrocery.com</span>
+                    </div>
+                </div>
+
+                <!-- Support item 4: Delivery Timings -->
+                <div class="contact-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <strong style="font-size: 14px; display: block;">Operating Hours</strong>
+                        <span style="font-size: 13px; color: #6b7280;">6:00 AM to 12:00 Midnight (All 7 Days)</span>
+                    </div>
+                </div>
+
+                <!-- Fast Delivery Promise Tag -->
+                <div style="background-color: #fff9e6; border: 1px solid #fef08a; border-radius: 8px; padding: 12px; margin-top: auto;">
+                    <p style="font-size: 13px; color: #854d0e; margin: 0;">
+                        ⚡ <strong>Need urgent help with an active order?</strong> Call our rider emergency helpline directly for instant dispatch resolution.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- =================================================================
+         3. FOOTER SECTION
+         ================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">⚡ QuickBlink</h3>
+                    <p class="footer-text">
+                        India's instant grocery delivery service. Delivering fresh vegetables, dairy, snacks, and drinks in 10 minutes.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p class="footer-text">📍 Tech Hub, Sector 62, Noida, India</p>
+                    <p class="footer-text">📞 Support: +91 98765 43210</p>
+                    <p class="footer-text">✉️ help@quickblinkgrocery.com</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn" title="Facebook">f</a>
+                        <a href="#" class="social-btn" title="Twitter / X">𝕏</a>
+                        <a href="#" class="social-btn" title="Instagram">in</a>
+                        <a href="#" class="social-btn" title="YouTube">▶</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 QuickBlink Grocery. All Rights Reserved. Designed for 1st Year B.Tech Academic Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

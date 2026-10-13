@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and mobile responsive meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalog - QuickBlink Grocery</title>
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. NAVIGATION BAR
+         Consistent across all pages with logo, links, and cart counter.
+         ================================================================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="logo">
+                ⚡ Quick<span class="logo-highlight">Blink</span>
+                <span class="logo-badge">10 MINS</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- Current active page is Products -->
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="cart.html" class="nav-cart-btn">
+                        🛒 Cart (<span class="cart-badge">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         2. LIVE PRODUCT SEARCH BAR
+         Filters grocery items instantly as you type in real time.
+         ================================================================= -->
+    <section class="search-section">
+        <div class="container" style="padding: 0;">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search for vegetables, milk, tea, chips..." 
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container">
+
+        <!-- Page Heading -->
+        <div class="section-header" style="margin-top: 20px;">
+            <h1 class="section-title">All Grocery Products</h1>
+            <p class="section-subtitle">Showing 12 fresh handpicked items delivered in 10 minutes</p>
+        </div>
+
+        <!-- =================================================================
+             3. CATEGORY FILTER BUTTONS (Client-Side Filtering)
+             Allows users to quickly filter items by category without page reload.
+             ================================================================= -->
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterCategory('all', this)" data-target="all">All Items</button>
+            <button class="filter-btn" onclick="filterCategory('fruits', this)" data-target="fruits">🍎 Fruits</button>
+            <button class="filter-btn" onclick="filterCategory('vegetables', this)" data-target="vegetables">🥕 Vegetables</button>
+            <button class="filter-btn" onclick="filterCategory('dairy', this)" data-target="dairy">🥛 Dairy</button>
+            <button class="filter-btn" onclick="filterCategory('snacks', this)" data-target="snacks">🍟 Snacks</button>
+            <button class="filter-btn" onclick="filterCategory('beverages', this)" data-target="beverages">🥤 Beverages</button>
+        </div>
+
+        <!-- =================================================================
+             4. PRODUCT CARDS GRID (12 Products)
+             Uses CSS Grid for responsive 4-column layout on desktop.
+             Each card contains:
+             1. Image, 2. Name, 3. Price (₹), 4. Quantity/Weight, 5. Add to Cart Button.
+             ================================================================= -->
+        <div class="products-grid" id="products-grid">
+
+            <!-- PRODUCT 1: Fresh Bananas -->
+            <div class="product-card" data-category="fruits">
+                <div class="product-img-container">
+                    <img src="images/banana.svg" alt="Fresh Farm Bananas" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Fruits</span>
+                    <h3 class="product-name">Fresh Farm Bananas</h3>
+                    <p class="product-qty">1 kg (approx. 5-6 pcs)</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹40</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p1', 'Fresh Farm Bananas', 40, 'images/banana.svg', '1 kg')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 2: Royal Gala Apples -->
+            <div class="product-card" data-category="fruits">
+                <div class="product-img-container">
+                    <img src="images/apple.svg" alt="Royal Gala Apples" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Fruits</span>
+                    <h3 class="product-name">Royal Gala Apples</h3>
+                    <p class="product-qty">500 g (approx. 3-4 pcs)</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹140</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p2', 'Royal Gala Apples', 140, 'images/apple.svg', '500 g')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 3: Hybrid Tomatoes -->
+            <div class="product-card" data-category="vegetables">
+                <div class="product-img-container">
+                    <img src="images/tomato.svg" alt="Fresh Hybrid Tomatoes" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Vegetables</span>
+                    <h3 class="product-name">Fresh Hybrid Tomatoes</h3>
+                    <p class="product-qty">1 kg pack</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹30</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p3', 'Fresh Hybrid Tomatoes', 30, 'images/tomato.svg', '1 kg')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 4: Farm Fresh Potatoes -->
+            <div class="product-card" data-category="vegetables">
+                <div class="product-img-container">
+                    <img src="images/potato.svg" alt="Farm Fresh Potatoes" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Vegetables</span>
+                    <h3 class="product-name">Farm Fresh Potatoes</h3>
+                    <p class="product-qty">1 kg bag</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹25</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p4', 'Farm Fresh Potatoes', 25, 'images/potato.svg', '1 kg')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 5: Amul Taaza Milk -->
+            <div class="product-card" data-category="dairy">
+                <div class="product-img-container">
+                    <img src="images/milk.svg" alt="Amul Taaza Toned Milk" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Dairy</span>
+                    <h3 class="product-name">Amul Taaza Toned Milk</h3>
+                    <p class="product-qty">500 ml pouch</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹27</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p5', 'Amul Taaza Toned Milk', 27, 'images/milk.svg', '500 ml')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 6: Amul Salted Butter -->
+            <div class="product-card" data-category="dairy">
+                <div class="product-img-container">
+                    <img src="images/butter.svg" alt="Amul Salted Butter" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Dairy</span>
+                    <h3 class="product-name">Amul Salted Butter</h3>
+                    <p class="product-qty">100 g pack</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹56</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p6', 'Amul Salted Butter', 56, 'images/butter.svg', '100 g')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 7: Mother Dairy Paneer -->
+            <div class="product-card" data-category="dairy">
+                <div class="product-img-container">
+                    <img src="images/paneer.svg" alt="Mother Dairy Malai Paneer" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Dairy</span>
+                    <h3 class="product-name">Mother Dairy Paneer</h3>
+                    <p class="product-qty">200 g block</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹95</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p7', 'Mother Dairy Paneer', 95, 'images/paneer.svg', '200 g')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 8: Lay's Salted Chips -->
+            <div class="product-card" data-category="snacks">
+                <div class="product-img-container">
+                    <img src="images/chips.svg" alt="Lay's Classic Salted Chips" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Snacks</span>
+                    <h3 class="product-name">Lay's Classic Salted Chips</h3>
+                    <p class="product-qty">50 g pouch</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹20</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p8', 'Lay\'s Classic Salted Chips', 20, 'images/chips.svg', '50 g')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 9: Haldiram's Bhujia Sev -->
+            <div class="product-card" data-category="snacks">
+                <div class="product-img-container">
+                    <img src="images/bhujia.svg" alt="Haldiram's Bhujia Sev" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Snacks</span>
+                    <h3 class="product-name">Haldiram's Bhujia Sev</h3>
+                    <p class="product-qty">150 g pack</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹45</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p9', 'Haldiram\'s Bhujia Sev', 45, 'images/bhujia.svg', '150 g')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 10: Coca-Cola Soft Drink -->
+            <div class="product-card" data-category="beverages">
+                <div class="product-img-container">
+                    <img src="images/cola.svg" alt="Coca-Cola Soft Drink" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Beverages</span>
+                    <h3 class="product-name">Coca-Cola Soft Drink</h3>
+                    <p class="product-qty">750 ml bottle</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹40</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p10', 'Coca-Cola Soft Drink', 40, 'images/cola.svg', '750 ml')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 11: Real Mixed Fruit Juice -->
+            <div class="product-card" data-category="beverages">
+                <div class="product-img-container">
+                    <img src="images/juice.svg" alt="Real Mixed Fruit Juice" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Beverages</span>
+                    <h3 class="product-name">Real Mixed Fruit Juice</h3>
+                    <p class="product-qty">1 Litre carton</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹110</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p11', 'Real Mixed Fruit Juice', 110, 'images/juice.svg', '1 L')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- PRODUCT 12: Tetley Green Tea Bags -->
+            <div class="product-card" data-category="beverages">
+                <div class="product-img-container">
+                    <img src="images/tea.svg" alt="Tetley Green Tea Bags" class="product-img">
+                </div>
+                <div>
+                    <span class="product-category-tag">Beverages</span>
+                    <h3 class="product-name">Tetley Green Tea Bags</h3>
+                    <p class="product-qty">25 Bags box</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">₹160</span>
+                    <button 
+                        class="btn-add-cart" 
+                        onclick="addToCart('p12', 'Tetley Green Tea Bags', 160, 'images/tea.svg', '25 bags')">
+                        + Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =================================================================
+         5. FOOTER SECTION
+         ================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">⚡ QuickBlink</h3>
+                    <p class="footer-text">
+                        India's instant grocery delivery service. Delivering fresh vegetables, dairy, snacks, and drinks in 10 minutes.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <p class="footer-text">📍 Tech Hub, Sector 62, Noida, India</p>
+                    <p class="footer-text">📞 Support: +91 98765 43210</p>
+                    <p class="footer-text">✉️ help@quickblinkgrocery.com</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-btn" title="Facebook">f</a>
+                        <a href="#" class="social-btn" title="Twitter / X">𝕏</a>
+                        <a href="#" class="social-btn" title="Instagram">in</a>
+                        <a href="#" class="social-btn" title="YouTube">▶</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2026 QuickBlink Grocery. All Rights Reserved. Designed for 1st Year B.Tech Academic Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

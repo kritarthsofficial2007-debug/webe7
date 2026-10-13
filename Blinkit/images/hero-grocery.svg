@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8cb46"/>
+      <stop offset="100%" stop-color="#e5b31e"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c831f"/>
+      <stop offset="100%" stop-color="#075e15"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background decorative glow -->
+  <circle cx="250" cy="180" r="140" fill="#fff8e1" opacity="0.8"/>
+  <circle cx="250" cy="180" r="100" fill="#e8f5e9" opacity="0.6"/>
+
+  <!-- Shopping Bag Main Body -->
+  <g filter="url(#shadow)">
+    <!-- Bag handles -->
+    <path d="M 190 120 C 190 60, 310 60, 310 120" fill="none" stroke="#d49b14" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- Paper grocery bag -->
+    <path d="M 140 120 L 360 120 L 340 310 L 160 310 Z" fill="url(#bagGrad)"/>
+    <!-- Bag fold creases -->
+    <path d="M 160 120 L 175 310" stroke="#d49b14" stroke-width="2" opacity="0.4"/>
+    <path d="M 340 120 L 325 310" stroke="#d49b14" stroke-width="2" opacity="0.4"/>
+    <polygon points="210,120 290,120 280,310 220,310" fill="#fff" opacity="0.12"/>
+  </g>
+
+  <!-- Groceries Peeking Out of the Bag -->
+  <!-- Milk Carton -->
+  <rect x="170" y="70" width="45" height="70" rx="4" fill="#3b82f6"/>
+  <polygon points="170,70 192,50 215,70" fill="#60a5fa"/>
+  <rect x="180" y="85" width="25" height="20" rx="2" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Baguette / Bread -->
+  <g transform="rotate(25 290 80)">
+    <rect x="280" y="40" width="30" height="90" rx="15" fill="#d97706"/>
+    <line x1="285" y1="60" x2="305" y2="60" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+    <line x1="285" y1="80" x2="305" y2="80" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+    <line x1="285" y1="100" x2="305" y2="100" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Carrot -->
+  <g transform="rotate(-15 220 90)">
+    <polygon points="220,110 240,110 230,45" fill="#f97316"/>
+    <!-- Greens -->
+    <path d="M 230 45 Q 220 30 215 25" stroke="#16a34a" stroke-width="3" fill="none"/>
+    <path d="M 230 45 Q 230 25 230 20" stroke="#16a34a" stroke-width="3" fill="none"/>
+    <path d="M 230 45 Q 240 30 245 25" stroke="#16a34a" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Red Apple -->
+  <circle cx="260" cy="115" r="26" fill="#ef4444"/>
+  <path d="M 260 90 Q 262 82 268 80" stroke="#78350f" stroke-width="3" fill="none"/>
+  <ellipse cx="268" cy="88" rx="6" ry="3" fill="#22c55e" transform="rotate(-20 268 88)"/>
+
+  <!-- Logo on the bag -->
+  <circle cx="250" cy="210" r="38" fill="#ffffff"/>
+  <path d="M 252 185 L 235 212 L 249 212 L 244 235 L 265 205 L 251 205 Z" fill="#0c831f"/>
+
+  <!-- Floating Fast Delivery Badge -->
+  <g filter="url(#shadow)" transform="translate(310, 210)">
+    <rect x="0" y="0" width="130" height="46" rx="23" fill="url(#badgeGrad)"/>
+    <!-- Lightning icon -->
+    <path d="M 24 13 L 13 26 L 21 26 L 18 35 L 31 22 L 23 22 Z" fill="#f8cb46"/>
+    <text x="40" y="28" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">10 MINS</text>
+  </g>
+
+  <!-- Floating sparkles -->
+  <polygon points="120,80 124,90 134,94 124,98 120,108 116,98 106,94 116,90" fill="#f8cb46"/>
+  <polygon points="380,90 383,97 390,100 383,103 380,110 377,103 370,100 377,97" fill="#0c831f"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <circle cx="100" cy="100" r="90" fill="#dcfce7"/>
+  <!-- Broccoli -->
+  <circle cx="70" cy="85" r="22" fill="#22c55e"/>
+  <circle cx="85" cy="75" r="20" fill="#16a34a"/>
+  <circle cx="60" cy="100" r="18" fill="#15803d"/>
+  <path d="M 68 105 L 68 135 L 78 135 L 78 105 Z" fill="#86efac"/>
+  <!-- Carrot -->
+  <g transform="rotate(35 120 110)">
+    <polygon points="110,90 130,90 120,150" fill="#f97316"/>
+    <path d="M 120 90 L 115 75 M 120 90 L 120 70 M 120 90 L 125 75" stroke="#15803d" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Tomato -->
+  <circle cx="125" cy="125" r="28" fill="#ef4444"/>
+  <polygon points="125,95 120,103 130,103" fill="#15803d"/>
+  <polygon points="125,95 115,97 122,105" fill="#15803d"/>
+  <polygon points="125,95 135,97 128,105" fill="#15803d"/>
+</svg>
